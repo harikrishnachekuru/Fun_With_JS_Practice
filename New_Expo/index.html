@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accept_My_Request</title>
+
+</head>
+
+<body>
+    <h1 style="position:absolute; left:220px; top:175px; width:auto; height:210px;">Do you want to accept me...</h1>
+    <div id="By" style="position:absolute; left:285px; top:235px; width:210px; height:210px;">
+        <input type="button" value=" Yes " onclick="f1()" />
+    </div>
+    <div id="Bn" style="position:absolute; left:360px; top:235px; width:210px; height:210px;">
+        <input type="button" value=" No " onmouseover="f()" />
+    </div>
+</body>
+
+<script type="text/javascript">
+    flag = 1;
+
+    function f1() {
+        alert("yes , I will accept you..");
+    }
+
+    function f() {
+        const Bn = document.getElementById("Bn");
+        if (flag == 1) {
+            console.log("hey buddy..!");
+            Bn.style.top = "90px";
+            console.log("Moved to top");
+            Bn.style.left = "500px";
+            console.log("Moved to left");
+            flag = 2
+        } else if (flag == 2) {
+            Bn.style.top = "90px";
+            console.log("Moved to top second time");
+            Bn.style.left = "50px";
+            console.log("Moved to left second time");
+
+            flag = 3
+        } else if (flag == 3) {
+            Bn.style.top = "235px";
+            Bn.style.left = "360px";
+            flag = 1
+        }
+    }
+</script>
+
+</html>
